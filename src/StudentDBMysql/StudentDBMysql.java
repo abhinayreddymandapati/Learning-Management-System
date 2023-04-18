@@ -150,6 +150,7 @@ public class StudentDBMysql extends javax.swing.JFrame {
         btnDelete = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
         btnAddNew = new javax.swing.JButton();
+        btnExit1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1360, 500));
@@ -364,7 +365,7 @@ public class StudentDBMysql extends javax.swing.JFrame {
                 btnDeleteActionPerformed(evt);
             }
         });
-        jPanel6.add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 10, 320, 60));
+        jPanel6.add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 10, 260, 60));
 
         btnExit.setBackground(new java.awt.Color(0, 153, 255));
         btnExit.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
@@ -374,7 +375,7 @@ public class StudentDBMysql extends javax.swing.JFrame {
                 btnExitActionPerformed(evt);
             }
         });
-        jPanel6.add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 10, 212, 60));
+        jPanel6.add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 10, 130, 60));
 
         btnAddNew.setBackground(new java.awt.Color(0, 153, 255));
         btnAddNew.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
@@ -386,7 +387,17 @@ public class StudentDBMysql extends javax.swing.JFrame {
         });
         jPanel6.add(btnAddNew, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 10, 200, 60));
 
-        jPanel5.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, 1290, 80));
+        btnExit1.setBackground(new java.awt.Color(0, 153, 255));
+        btnExit1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        btnExit1.setText("Logout");
+        btnExit1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExit1ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(btnExit1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 10, 160, 60));
+
+        jPanel5.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, 1400, 80));
 
         jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1460, 520));
 
@@ -512,13 +523,18 @@ private JFrame frame;
        clearWhole();
        updateDB();
       }
- 
- 
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void cboGenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboGenderActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cboGenderActionPerformed
+
+    private void btnExit1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExit1ActionPerformed
+        JOptionPane.showMessageDialog(this,"Logout Successfull");
+        Login ln = new Login();
+        ln.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnExit1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -559,6 +575,7 @@ private JFrame frame;
     private javax.swing.JButton btnAddNew;
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnExit;
+    private javax.swing.JButton btnExit1;
     private javax.swing.JButton btnPrint;
     private javax.swing.JButton btnReset;
     private javax.swing.JComboBox<String> cboAnalysis;
